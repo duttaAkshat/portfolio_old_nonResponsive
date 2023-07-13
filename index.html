@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AkshatDutta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<style>    
+.header{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    position: absolute;
+    z-index: 1;
+    font-family:Arial, Helvetica, sans-serif
+    /* margin-top: 10px; */
+}
+.header-logo{
+    margin-left: 25%;
+}
+.navbar{
+    margin: 0 auto;
+    /* margin-top: 10px; */
+}
+ul{
+    display:flex;
+    
+}
+li{
+    list-style: none;
+    margin: 1rem;
+}
+
+.changer{
+    display:flex;
+    margin-right: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    margin-right: 1rem;
+    display:none;    
+}
+.closed .close{
+    display:none;
+}
+
+@media (max-width) {
+    .header{
+        justify-content: space-between;
+    }
+    .navbar{
+        display: none;
+        transition: 1s ease;
+        /* margin-top: 10px; */
+    }
+    .navbar :active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        inset: 0;
+        background: rgb(221, 160, 160);
+        transition: 1400 ease;
+        /* margin-top: 10px; */
+    }
+    ul{
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+
+    }
+    li{
+        margin-block: 2rem;
+    }
+    a{
+        font-size: 20px;
+        color: black;
+    }
+    .changer menu{
+        display: block;
+    }
+    .closed .close{
+        display:block;
+    }
+    .header-logo{
+        margin-left: .450rem;
+    }
+}
+
+@media (max-width :350px) {
+    ul{
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+
+    }
+    li{
+        margin-block: 2rem;
+    }
+    a{
+        font-size: 20px;
+        color: black;
+    }
+    .changer menu{
+        display: inline;
+        margin-right: 0;
+    }
+}
+
+
+
+body {
+	background: linear-gradient(-45deg, #dabb65, #da7199, #23a6d5, #0deab6);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.main__container {
+display: flex;
+height: 90vh;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+
+.main__content {
+margin-left: 3.445rem;
+}
+
+.text {
+line-height: 55px;
+
+p {
+    color: rgb(157, 155, 155);
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+}
+
+.icons{
+display: flex;
+}
+.icons .icon{    
+    margin-top: 1rem;
+    margin-right: 1.4rem;
+    font-size: 35px;
+    cursor: pointer;
+    color: rgb(157, 155, 155);
+    &:hover {
+        color: red;
+}
+.fa-linkedin {  
+  background: #007bb5;  
+  color: white;  
+}  
+.fa-instagram {  
+  background: #125688;  
+  color: white;  
+}  
+.fa-github {  
+  background: #125688;  
+  color: white;  
+} 
+
+}
+
+.main__img {
+
+clip-path: circle(45% at 50% 47%);
+margin-right: 20px;
+cursor: pointer;
+
+img {
+    background:linear-gradient(45deg,rgb(216, 46, 8),rgb(62, 7, 189));
+}
+}
+
+.buttons button {
+    padding: 6px 30px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    background: linear-gradient(25deg,rgba(1, 60, 210, 0.753),rgb(255, 72, 6));
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+.main__container.active {
+background: red;
+}
+
+@media (max-width:1200px)
+
+{
+
+.text {
+   white-space: nowrap;
+    line-height: 30px;
+    p {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+}
+.buttons button {
+    padding: 1px 2px;
+}
+
+}
+@media (max-width:600px) {
+.main__content {
+    margin-left: 0;
+}
+.main__container {
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.main__img img {
+    width: 250px;
+}
+.text {
+    h1 {
+        font-size: 23px;
+    }
+    p {
+        color: #000;
+        font-size: 11px;
+    }
+}
+a .nav_hover{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+
+    &:hover{
+        border-bottom: 3px solid red;
+    }
+}
+
+}
+
+  </style>  
+  
+  </head>
+  
+  <body>
+
+    <div class="header" style="padding-top: 20px;">
+      <div class="header-logo">
+          <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">AkshatDutta</h1>
+      </div>
+  
+      <nav>
+          <ul>
+              <div class="closed">
+                  <close class='close' onClick={showMenu}/>
+              </div>
+              <li>
+                  <a href="" style="text-decoration: none; text-transform: uppercase; color: black;"><b>Home</b></a>
+              </li>
+              <li>
+                  <a href="/about" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>About</b></a>
+              </li>
+              <li>
+                  <a href="/portfolio" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>Portfolio</b></a>
+              </li>
+              <li>
+                  <a href="/contact" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>Contact</b></a>
+              </li>
+          </ul>
+      </nav>
+      
+              
+  </div>
+  <br><br><br>
+  <center><hr style="width: 700px; border-top: 5px solid white"> </center>
+    <div class="main">
+      <div class="main__container">
+          <div class="main__content">
+              <div class="text">
+                  <!-- <p style="font-size: 35px;">Hello Everyone!</p> -->
+                  <h1 style="font-size: 90px;"><i> Akshat Dutta</i></h1>
+                  <p style="font-size: 35px;">Student in BITS Pilani, Goa</p>
+                  <div class="icons">
+                    <a href="https://www.linkedin.com/in/akshat-dutta/" class="fa fa-linkedin icon" target="_blank"></a> 
+                    <h1>   </h1>
+                    <a href="https://github.com/duttaAkshat" class="fa fa-github icon" target="_blank"></a> 
+                    <h1>   </h1>
+                    <a href="https://www.instagram.com/ad.akshat/" class="fa fa-instagram icon" target="_blank"></a>
+
+                  </div>
+                  <div class="buttons">
+                      <a href="/contact"><button >Contact Me</button></a>
+                      <a href="/projects"><button >Projects</button></a>
+                  </div>
+              </div>
+          </div>
+          <div class="main__img">
+              <img src=https://yt3.googleusercontent.com/k0QsG3-wvOsNNZfzMPxGsURwxqp63QzRPKAxIs6O6x7UwRpt803mH0Eu8RDtKoGb74UjcKr-XuY=s900-c-k-c0x00ffffff-no-rj  style="height: 500px; filter: brightness(1.1);"></img>
+          </div>
+      </div>
+      
+  </div>
+
+
+  
+  </body>
+</html>

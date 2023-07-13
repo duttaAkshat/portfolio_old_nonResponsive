@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactMe</title>
+    <style>
+        .header{
+            width: 100%;
+            display: flex;
+            align-items:center;
+            position: absolute;
+            z-index: 1;
+            font-family:Arial, Helvetica, sans-serif
+            /* margin-top: 10px; */
+        }
+        .header-logo{
+            margin-left: 25%;
+        }
+        .navbar{
+            margin: 0 auto;
+            /* margin-top: 10px; */
+        }
+        ul{
+            display:flex;
+            
+        }
+        li{
+            list-style: none;
+            margin: 1rem;
+        }
+        
+        .changer{
+            display:flex;
+            margin-right: 1.5rem;
+        }
+        .menu{
+            cursor: pointer;
+            margin-right: 1rem;
+            display:none;    
+        }
+        .closed .close{
+            display:none;
+        }
+        
+        @media (max-width) {
+            .header{
+                justify-content: space-between;
+            }
+            .navbar{
+                display: none;
+                transition: 1s ease;
+                /* margin-top: 10px; */
+            }
+            .navbar :active{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                inset: 0;
+                background: rgb(221, 160, 160);
+                transition: 1400 ease;
+                /* margin-top: 10px; */
+            }
+            ul{
+                margin: 0 auto;
+                align-items: center;
+                flex-direction: column;
+                /* margin-top: 1rem; */
+        
+            }
+            li{
+                margin-block: 2rem;
+            }
+            a{
+                font-size: 20px;
+                color: black;
+            }
+            .changer menu{
+                display: block;
+            }
+            .closed .close{
+                display:block;
+            }
+            .header-logo{
+                margin-left: .450rem;
+            }
+        }
+        
+        @media (max-width :350px) {
+            ul{
+                margin: 0 auto;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 1rem;
+        
+            }
+            li{
+                margin-block: 2rem;
+            }
+            a{
+                font-size: 20px;
+                color: black;
+            }
+            .changer menu{
+                display: inline;
+                margin-right: 0;
+            }
+        }
+body {
+    background: linear-gradient(-45deg, #dabb65, #da7199, #23a6d5, #0deab6);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container {
+    margin-top: 60px;
+    display: grid;
+    align-items: left; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+.text {
+    margin-left: -420px;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="header" >
+        <div class="header-logo">
+            <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">AkshatDutta</h1>
+        </div>
+    
+        <nav>
+            <ul>
+                <div class="closed">
+                    <close class='close' onClick={showMenu}/>
+                </div>
+                <li>
+                    <a href="/" style="text-decoration: none; text-transform: uppercase; color: black;"><b>Home</b></a>
+                </li>
+                <li>
+                    <a href="/about" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>About</b></a>
+                </li>
+                <li>
+                    <a href="/portfolio" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>Portfolio</b></a>
+                </li>
+                <li>
+                    <a href="/contact" style="text-decoration: none; text-transform: uppercase; color: #000;"><b>Contact</b></a>
+                </li>
+            </ul>
+        </nav>
+        
+                
+    </div>
+    <br><br><br><br>
+    <center><hr style="width: 700px; border-top: 5px solid white; " > </center> 
+   <div style="margin-top: 50px; margin-left: 50px;">
+    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;" >CONTACT</h1> 
+    
+    <div class="container">
+        <div class="image">
+            <img src="https://www.citypng.com/public/uploads/preview/hd-letter-email-round-blue-icon-transparent-png-11637141038bsz4tzs1ur.png?v=2023061910" style="height: 50px;">
+        </div>
+        <div class="text">
+            ad.akshat09@gmail.com
+        </div>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEUAe7X///8AcbDi6/MAd7N9rM4Ac7G70eStyN/I2ukAebQAdbI5j79Unsjo8vjM4u7Y6fIfiLy00uWew9sHfrZvqs52qc3T5O+ly+FvpMpopcuMudcUg7qny+Hg7/ZDlMKAtNTw9/u92eljoMiTuNWBttWUwNukw9s5k8K61+jZwmoZAAAEoUlEQVR4nO2dbVvbIBSGgTJUSGjStNtsrX1x69b//weXtNMaDVR30YOePfcXP5RcF7e8JhxAyEeqpqynggV12VRPXuLv30mhnM6ds2Rop4pJz9CXxubOVWKsKf3JcCz4FN8JLcaPhmPFrQCPWDU+GnrBU7BVFP5gWHKsokd02RlOTO58XBA1aQ0LrnW0wxZSVCp3Li6KqkTjcmfiorhGMO5nOnQp6tx5uDC1YDLZBgAAAAAAAAAAAAAAAADAf43VRrUYx3SJ1Ro9b8YjX00WhWK4BmnN3fIprkrez/gFHLmd7FGteMU72GO0UY81p3gAa6tXgqwUrXtdgh1zNhEBZjEoKDd3XLqb6bCgZBNdZb6HDCWPQrR2EzRsWBSifggKSs+iO3051verae7cpUBtI4Ylh4aoRhHDrxyGxKjhFw6G5lvEkMW0xiwjhizijd06Yqg5GNoiLLhlMeILNfTqxKgZtpOaeUiQx5RGRAqRSRG2hRhoiXserbDDDdbTikM/+oiZDQhOORkKU25eVlFuG+DctPem7+d82uATRuzuj3qb7Vxx6UX7OHW3ur19KDRTvwNaa2uZNUAAwEfgsLQdoN+pukjKF6vG1radlnPmiOs6MEKlPub6JszDc0X3I5JycVK01hlRr+Y/d8ur9perSbOYlYU1uc7pePu3NnMVSXn9OAlqTcrd2L9K4G8WqzzxAWkNtSqWm2Aiv5tmCBBIaWhNMbzYemJfk894Uxrq5oxfR0N98EpCQ32uAI/4grY5JjO0JvzR7gUz0pqazNBMIj+/YEGpmMpQlW8XlPInoWIywzfX0QMlXVtMZbh6l6CUNdnAmMjw1zta4YExWZBnKsPNOw3lmqqeJjKMRQMMs6F63Uhk+A/siPrTfIYbovXXfIZyTTNBzWhY0VTTjIZyRVKIOQ1p+pqchhXJkJjTkGbqltVwRtEQsxpOKKppVkOS8SKrIUlYWV7D3wQNMa8hxStUckO/XTZNs9zfvyXxkqAhpjWs1nW3R7NbdVJ3X89/P90ShM6lNPRz87zrcKo8V5AUwYEJDV8flK71uc83n6qWDh6UrmJB1pJkR0cyQz8YCGfPfEcliCRPZjgb7vhjUdaSZM9KKsP7UIsy0c9wBHtWUhkuQmO3ji5oEAz5qQzDr3rTzb/8Yz6c4SY8sKnYrpzdpzEchwe2yCZVKb9/GsPInmEX2El97rkPZngdMfwSeY5gQ8DlDXXMkGDqndlwzN7wG/taSnDhSGbDEQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMKwj7kZBfG3z7druV/hlKMf4V129taHn7sh2CYbO0e4vx8tdo5wbBuhjTzH8Px+AAAAAAAAAAAAAAAAAAAAAAAA4ESdOwMXphYl46vfRXcqsWiy3LlLhmsEwVGLOVGVoDjlPB+2kILiZN58mH1rKBn3Nd3p562hF1zrqRX+YDh8DQMDrOouPekMB67S4IAWh1tdDobSl+yK0ZrSy5OhlJNCOT4FqZ0q9n/NxFP0bdWUXOaoddmcbjr5A5XhWJeQSJXvAAAAAElFTkSuQmCC" style="height: 50px;"> 
+        </div>
+        <div class="text">
+            https://www.linkedin.com/in/akshat-dutta/
+        </div>
+    </div>  
+
+    </div>
+    
+</body>
+</html>
