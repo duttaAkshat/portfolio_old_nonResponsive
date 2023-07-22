@@ -42,89 +42,25 @@
         .closed .close{
             display:none;
         }
-        
-        @media (max-width) {
-            .header{
-                justify-content: space-between;
-            }
-            .navbar{
-                display: none;
-                transition: 1s ease;
-                /* margin-top: 10px; */
-            }
-            .navbar :active{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                position: fixed;
-                inset: 0;
-                background: rgb(221, 160, 160);
-                transition: 1400 ease;
-                /* margin-top: 10px; */
-            }
-            ul{
-                margin: 0 auto;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 1rem;
-        
-            }
-            li{
-                margin-block: 2rem;
-            }
-            a{
-                font-size: 20px;
-                color: black;
-            }
-            .changer menu{
-                display: block;
-            }
-            .closed .close{
-                display:block;
-            }
-            .header-logo{
-                margin-left: .450rem;
-            }
+           
+        body {
+            background: linear-gradient(-45deg, #dabb65, #da7199, #23a6d5, #0deab6);
+            background-size: 400% 400%;
+            animation: gradient 7s ease infinite;
+            height: 100vh;
         }
-        
-        @media (max-width :350px) {
-            ul{
-                margin: 0 auto;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 1rem;
-        
-            }
-            li{
-                margin-block: 2rem;
-            }
-            a{
-                font-size: 20px;
-                color: black;
-            }
-            .changer menu{
-                display: inline;
-                margin-right: 0;
-            }
-        }
-body {
-	background: linear-gradient(-45deg, #dabb65, #da7199, #23a6d5, #0deab6);
-	background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
-	height: 100vh;
-}
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
         </style>
 </head>
 <body>
